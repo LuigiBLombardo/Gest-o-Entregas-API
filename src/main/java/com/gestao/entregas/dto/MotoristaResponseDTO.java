@@ -10,6 +10,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * */
 public record MotoristaResponseDTO(
 
+        @Schema(description = "ID do Motorista", example = "1")
+        Long id,
+
         @Schema(description = "Nome do Motorista", example = "Luigi")
         String nome,
 
