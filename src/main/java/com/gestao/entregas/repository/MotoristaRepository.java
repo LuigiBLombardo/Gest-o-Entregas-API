@@ -6,6 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
+/**
+ * Repositório responsável pelo acesso dos dados de Motoristas
+ * */
+
 public interface MotoristaRepository extends JpaRepository<MotoristaEntity,Long> {
 
     @Query

@@ -1,5 +1,6 @@
 package com.gestao.entregas.config;
 
+import com.gestao.entregas.entity.EntregaEntity;
 import com.gestao.entregas.entity.MotoristaEntity;
 import com.gestao.entregas.repository.EntregaRepository;
 import com.gestao.entregas.repository.MotoristaRepository;
@@ -34,6 +35,19 @@ public class CargaDadosInicial implements CommandLineRunner {
                     MotoristaEntity.builder()
                             .nome("Luigi")
                             .cnh("11246439578")
+                            .build()
+            );
+        }
+
+        if (entregaRepository.count() == 0){
+            List<EntregaEntity> entregasIniciais = List.of(
+                    EntregaEntity.builder()
+                            .descricao("Entrega de um computador para a RUA Antonio Carlos")
+                            .status("ATIVO")
+                            .build(),
+                    EntregaEntity.builder()
+                            .descricao("Entrega de um mouse para a RUA Guilherme Lucas")
+                            .status("ATIVO")
                             .build()
             );
         }

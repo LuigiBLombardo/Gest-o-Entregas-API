@@ -3,6 +3,8 @@ package com.gestao.entregas.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_motorista")
 @Getter
@@ -23,5 +25,5 @@ public class MotoristaEntity {
     private String cnh;
 
     @OneToMany(mappedBy = "motorista")
-    private EntregaEntity entrega;
+    private List<EntregaEntity> entregas;
 }
