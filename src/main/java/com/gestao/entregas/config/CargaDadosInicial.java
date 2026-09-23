@@ -1,6 +1,7 @@
 package com.gestao.entregas.config;
 
 import com.gestao.entregas.entity.MotoristaEntity;
+import com.gestao.entregas.repository.MotoristaRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
