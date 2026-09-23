@@ -1,5 +1,6 @@
 package com.gestao.entregas.config;
 
+import com.gestao.entregas.entity.MotoristaEntity;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,10 +20,20 @@ public class CargaDadosInicial implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception{
         if (motoristaRepository.count() == 0){
-            List<Motorista> motoristasInciais = List.of(
-                    Motorista.builder()
+            List<MotoristaEntity> motoristasInciais = List.of(
+                    MotoristaEntity.builder()
                             .nome("")
-            )
+                            .cnh("")
+                            .build(),
+                    MotoristaEntity.builder()
+                            .nome("")
+                            .cnh("")
+                            .build(),
+                    MotoristaEntity.builder()
+                            .nome("")
+                            .cnh("")
+                            .build()
+            );
         }
     }
 }
