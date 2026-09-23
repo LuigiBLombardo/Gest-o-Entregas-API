@@ -14,12 +14,14 @@ public class MotoristaEntity {
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column(name = "nome",nullable = false,length = 100)
-    String nome;
+    private String nome;
 
     @Column(name = "cnh",nullable = false,length = 20,unique = true)
-    String cnh;
+    private String cnh;
 
+    @OneToMany(mappedBy = "motorista")
+    private EntregaEntity entrega;
 }
