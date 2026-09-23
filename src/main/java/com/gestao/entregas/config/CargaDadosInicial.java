@@ -1,6 +1,7 @@
 package com.gestao.entregas.config;
 
 import com.gestao.entregas.entity.MotoristaEntity;
+import com.gestao.entregas.repository.EntregaRepository;
 import com.gestao.entregas.repository.MotoristaRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -23,16 +24,16 @@ public class CargaDadosInicial implements CommandLineRunner {
         if (motoristaRepository.count() == 0){
             List<MotoristaEntity> motoristasInciais = List.of(
                     MotoristaEntity.builder()
-                            .nome("")
-                            .cnh("")
+                            .nome("Guilherme")
+                            .cnh("02426730578")
                             .build(),
                     MotoristaEntity.builder()
-                            .nome("")
-                            .cnh("")
+                            .nome("Eduardo")
+                            .cnh("01446739578")
                             .build(),
                     MotoristaEntity.builder()
-                            .nome("")
-                            .cnh("")
+                            .nome("Luigi")
+                            .cnh("11246439578")
                             .build()
             );
         }
