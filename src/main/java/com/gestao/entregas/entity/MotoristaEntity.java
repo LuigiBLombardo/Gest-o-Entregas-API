@@ -1,5 +1,6 @@
 package com.gestao.entregas.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,6 +25,7 @@ public class MotoristaEntity {
     @Column(name = "cnh",nullable = false,length = 20,unique = true)
     private String cnh;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "motorista")
     private List<EntregaEntity> entregas;
 }

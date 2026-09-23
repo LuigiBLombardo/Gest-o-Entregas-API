@@ -1,5 +1,6 @@
 package com.gestao.entregas.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class EntregaEntity {
     @Column(name = "status",nullable = false,length = 30)
     private String status;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "motorista_id")
     private MotoristaEntity motorista;
